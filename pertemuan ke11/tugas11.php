@@ -24,9 +24,9 @@ if ($conn->query($sql) === TRUE) {
 // Buat tabel baru
 $sql = "CREATE TABLE pakaian (
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    nama VARCHAR(30) NOT NULL,
-    alamat VARCHAR(50) NOT NULL,
-    telepon VARCHAR(15)
+    merk VARCHAR(30) NOT NULL,
+    ukuran VARCHAR(50) NOT NULL,
+    warna VARCHAR(15)
 )";
 
 if ($conn->query($sql) === TRUE) {
@@ -36,7 +36,7 @@ if ($conn->query($sql) === TRUE) {
 }
 
 // Insert data ke tabel
-$sql = "INSERT INTO pakaian (nama, harga) VALUES ('Baju', 50000), ('Parfume', 40000), ('Sarung', 80000)";
+$sql = "INSERT INTO pakaian (id, merk, ukuran, warna) VALUES ( 1,'al-husain', 'XXL','Putih' ), (2, 'rabbani','XL','coksu')";
 
 if ($conn->query($sql) === TRUE) {
     echo "Data berhasil ditambahkan";
@@ -47,7 +47,7 @@ if ($conn->query($sql) === TRUE) {
 $conn->close();
 
 // Update data di tabel
-$sql = "UPDATE pakaian SET harga = 60000 WHERE nama = 'Baju'";
+$sql = "UPDATE pakaian SET warna = 'marron' WHERE merk = 'al-husain'";
 
 if ($conn->query($sql) === TRUE) {
     echo "Data berhasil diupdate";
