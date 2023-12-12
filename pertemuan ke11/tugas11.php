@@ -36,7 +36,7 @@ if ($conn->query($sql) === TRUE) {
 }
 
 // Insert data ke tabel
-$sql = "INSERT INTO pakaian (nama, harga) VALUES ('Baju', 50), ('Parfume', 40), ('Sarung', 80)";
+$sql = "INSERT INTO pakaian (nama, harga) VALUES ('Baju', 50000), ('Parfume', 40000), ('Sarung', 80000)";
 
 if ($conn->query($sql) === TRUE) {
     echo "Data berhasil ditambahkan";
@@ -47,7 +47,7 @@ if ($conn->query($sql) === TRUE) {
 $conn->close();
 
 // Update data di tabel
-$sql = "UPDATE pakaian SET harga = 60 WHERE nama = 'Baju'";
+$sql = "UPDATE pakaian SET harga = 60000 WHERE nama = 'Baju'";
 
 if ($conn->query($sql) === TRUE) {
     echo "Data berhasil diupdate";
